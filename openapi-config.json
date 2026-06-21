@@ -1,0 +1,8 @@
+{
+    "composerPackageName": "ryanbeiden/artifacts-php-sdk",
+    "artifactVersion": "1.0.0",
+    "invokerPackage": "ArtifactsMmo",
+    "srcBasePath": "",
+    "variableNamingConvention": "camelCase",
+    "disallowAdditionalPropertiesIfNotPresent": false
+}

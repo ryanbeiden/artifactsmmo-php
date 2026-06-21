@@ -1,0 +1,9 @@
+# MyCharactersListSchema
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**\ArtifactsMmo\Model\CharacterSchema[]**](CharacterSchema.md) | List of your characters. |
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
