@@ -36,11 +36,5 @@
     },
     "autoload-dev": {
         "psr-4": { "ArtifactsMmo\\Test\\" : "test/" }
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:ryanbeiden/artifactsmmo-php.git"
-        }
-    ]
+    }
 }
