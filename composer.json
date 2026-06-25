@@ -1,7 +1,7 @@
 {
     "name": "ryanbeiden/artifactsmmo-php",
     "version": "1.0.0",
-    "description": "Artifacts is an API-based MMO game where you can manage 5 characters to explore, fight, gather resources, craft items and much more.  Website: https://artifactsmmo.com/  Documentation: https://docs.artifactsmmo.com/  OpenAPI Spec: https://api.artifactsmmo.com/openapi.json",
+    "description": "Artifacts is an API-based MMO game. This is a PHP SDK for the existing OpenAPI Schema",
     "keywords": [
         "openapitools",
         "openapi-generator",
