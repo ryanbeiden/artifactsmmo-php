@@ -8,7 +8,7 @@ Documentation: https://docs.artifactsmmo.com/
 
 OpenAPI Spec: https://api.artifactsmmo.com/openapi.json
 
-## Installation & Usage
+## Installation
 
 ### Requirements
 
@@ -22,29 +22,75 @@ composer require ryanbeiden/artifactsmmo-php
 
 ## Getting Started
 
-Please follow the [installation procedure](#installation--usage) and then run the following:
+### Authorization
 
 ```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
+/** @var ArtifactsMmo\Configuration */
+Configuration::getDefaultConfiguration(
+    ->setHost(config('artifacts.host'))
+    ->setAccessToken(config('artifacts.token'));
+```
 
+- [Artifacts Host](https://api.artifactsmmo.com/docs/#/operations/get_server_details__get) (i.e. https://api.artifactsmmo.com)
+- [Artifacts Token](https://artifactsmmo.com/my) (must be logged in)
 
+### Usage
 
+```php
+/**
+ * @return CharacterSchema[]
+ */
+protected function getMyCharacters(): array
+{
+    try {
+        $config = Configuration::getDefaultConfiguration()
+            ->setHost(config('artifacts.host'))
+            ->setAccessToken(config('artifacts.token'));
 
-$apiInstance = new ArtifactsMmo\Api\AccountsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$addAccountSchema = new \ArtifactsMmo\Model\AddAccountSchema(); // \ArtifactsMmo\Model\AddAccountSchema
+        $api = new MyCharactersApi(config: $config);
 
-try {
-    $result = $apiInstance->createAccountAccountsCreatePost($addAccountSchema);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AccountsApi->createAccountAccountsCreatePost: ', $e->getMessage(), PHP_EOL;
+        return $api->getMyCharactersMyCharactersGet()->getData();
+    } catch (\Throwable $e) {
+        Log::error('Could not get my characters');
+
+        return [];
+    }
+}
+```
+
+Using a Service Provider (Laravel)
+```php
+/**
+ * ArtifactsServiceProvider.php
+ */
+public function register(): void
+{
+    $this->app->singleton(Configuration::class, function () {
+        return Configuration::getDefaultConfiguration()
+            ->setHost(config('artifacts.host'))
+            ->setAccessToken(config('artifacts.token'));
+    });
+
+    $this->app->bind(MyCharactersApi::class, function ($app) {
+        return new MyCharactersApi(config: $app->make(Configuration::class));
+    });
 }
 
+/**
+ * Usage
+ */
+protected function getMyCharacters(): array
+{
+    try {
+        return app(MyCharactersApi::class)
+            ->getMyCharactersMyCharactersGet()
+            ->getData();
+    } catch (\Throwable $e) {
+        Log::error('Could not get my characters');
+
+        return [];
+    }
+}
 ```
 
 ## API Endpoints
@@ -350,77 +396,6 @@ Class | Method | HTTP request | Description
 - [UseItemResponseSchema](docs/Model/UseItemResponseSchema.md)
 - [UseItemSchema](docs/Model/UseItemSchema.md)
 - [ValidationError](docs/Model/ValidationError.md)
-
-## Authorization
-
-```php
-/** @var ArtifactsMmo\Configuration */
-Configuration::getDefaultConfiguration(
-    ->setHost(config('artifacts.host'))
-    ->setAccessToken(config('artifacts.token'));
-```
-
-- [Artifacts Host](https://api.artifactsmmo.com/docs/#/operations/get_server_details__get) (i.e. https://api.artifactsmmo.com)
-- [Artifacts Token](https://artifactsmmo.com/my) (must be logged in)
-
-### Usage
-
-```php
-/**
- * @return CharacterSchema[]
- */
-protected function getMyCharacters(): array
-{
-    try {
-        $config = Configuration::getDefaultConfiguration()
-            ->setHost(config('artifacts.host'))
-            ->setAccessToken(config('artifacts.token'));
-
-        $api = new MyCharactersApi(config: $config);
-
-        return $api->getMyCharactersMyCharactersGet()->getData();
-    } catch (\Throwable $e) {
-        Log::error('Could not get my characters');
-
-        return [];
-    }
-}
-```
-
-Using a Service Provider (Laravel)
-```php
-/**
- * ArtifactsServiceProvider.php
- */
-public function register(): void
-{
-    $this->app->singleton(Configuration::class, function () {
-        return Configuration::getDefaultConfiguration()
-            ->setHost(config('artifacts.host'))
-            ->setAccessToken(config('artifacts.token'));
-    });
-
-    $this->app->bind(MyCharactersApi::class, function ($app) {
-        return new MyCharactersApi(config: $app->make(Configuration::class));
-    });
-}
-
-/**
- * Usage
- */
-protected function getMyCharacters(): array
-{
-    try {
-        return app(MyCharactersApi::class)
-            ->getMyCharactersMyCharactersGet()
-            ->getData();
-    } catch (\Throwable $e) {
-        Log::error('Could not get my characters');
-
-        return [];
-    }
-}
-```
 
 ## Author
 
