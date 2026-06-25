@@ -1,0 +1,4 @@
+.github export-ignore
+regen.sh export-ignore
+openapi-config.json export-ignore
+.gitignore export-ignore

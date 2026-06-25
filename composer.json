@@ -1,22 +1,15 @@
 {
     "name": "ryanbeiden/artifactsmmo-php",
     "version": "1.0.0",
-    "description": "Artifacts is an API-based MMO game. This is a PHP SDK for the existing OpenAPI Schema",
-    "keywords": [
-        "openapitools",
-        "openapi-generator",
-        "openapi",
-        "php",
-        "sdk",
-        "rest",
-        "api"
-    ],
-    "homepage": "https://openapi-generator.tech",
-    "license": "unlicense",
+    "description": "A type-safe PHP SDK for the Artifacts MMO game API.",
+    "keywords": ["artifacts-mmo", "sdk", "api-client", "php", "openapi"],
+    "homepage": "https://github.com/ryanbeiden/artifactsmmo-php",
+    "license": "MIT",
     "authors": [
         {
-            "name": "OpenAPI",
-            "homepage": "https://openapi-generator.tech"
+            "name": "Ryan Beiden",
+            "email": "ryanbeiden@pm.me",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -32,9 +25,8 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "ArtifactsMmo\\" : "/" }
-    },
-    "autoload-dev": {
-        "psr-4": { "ArtifactsMmo\\Test\\" : "test/" }
+        "psr-4": {
+            "ArtifactsMmo\\" : ""
+        }
     }
 }
