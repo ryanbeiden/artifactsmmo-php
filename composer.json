@@ -1,6 +1,5 @@
 {
     "name": "ryanbeiden/artifactsmmo-php",
-    "version": "1.0.0",
     "description": "A type-safe PHP SDK for the Artifacts MMO game API.",
     "keywords": ["artifacts-mmo", "sdk", "api-client", "php", "openapi"],
     "homepage": "https://github.com/ryanbeiden/artifactsmmo-php",
