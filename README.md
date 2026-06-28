@@ -111,11 +111,17 @@ Class | Method | HTTP request | Description
 *CharactersApi* | [**deleteCharacterCharactersDeletePost**](docs/Api/CharactersApi.md#deletecharactercharactersdeletepost) | **POST** /characters/delete | Delete Character
 *CharactersApi* | [**getActiveCharactersCharactersActiveGet**](docs/Api/CharactersApi.md#getactivecharacterscharactersactiveget) | **GET** /characters/active | Get Active Characters
 *CharactersApi* | [**getCharacterCharactersNameGet**](docs/Api/CharactersApi.md#getcharactercharactersnameget) | **GET** /characters/{name} | Get Character
+*CharactersApi* | [**getCharacterStatsCharactersNameStatsGet**](docs/Api/CharactersApi.md#getcharacterstatscharactersnamestatsget) | **GET** /characters/{name}/stats | Get Character Stats
 *EffectsApi* | [**getAllEffectsEffectsGet**](docs/Api/EffectsApi.md#getalleffectseffectsget) | **GET** /effects | Get All Effects
 *EffectsApi* | [**getEffectEffectsCodeGet**](docs/Api/EffectsApi.md#geteffecteffectscodeget) | **GET** /effects/{code} | Get Effect
 *EventsApi* | [**getAllActiveEventsEventsActiveGet**](docs/Api/EventsApi.md#getallactiveeventseventsactiveget) | **GET** /events/active | Get All Active Events
 *EventsApi* | [**getAllEventsEventsGet**](docs/Api/EventsApi.md#getalleventseventsget) | **GET** /events | Get All Events
-*EventsApi* | [**spawnEventEventsSpawnPost**](docs/Api/EventsApi.md#spawneventeventsspawnpost) | **POST** /events/spawn | Spawn Event
+*GameAssistantApi* | [**askGameAssistantGameAssistantAskPost**](docs/Api/GameAssistantApi.md#askgameassistantgameassistantaskpost) | **POST** /game_assistant/ask | Ask Game Assistant
+*GemsShopApi* | [**buyCustomDesignGemsShopBuyCustomDesignPost**](docs/Api/GemsShopApi.md#buycustomdesigngemsshopbuycustomdesignpost) | **POST** /gems_shop/buy_custom_design | Buy Custom Design
+*GemsShopApi* | [**buySkinGemsShopSkinPost**](docs/Api/GemsShopApi.md#buyskingemsshopskinpost) | **POST** /gems_shop/skin | Buy Skin
+*GemsShopApi* | [**buySpawnEventGemsShopSpawnEventPost**](docs/Api/GemsShopApi.md#buyspawneventgemsshopspawneventpost) | **POST** /gems_shop/spawn_event | Buy Spawn Event
+*GemsShopApi* | [**buySubscriptionGemsShopSubscriptionPost**](docs/Api/GemsShopApi.md#buysubscriptiongemsshopsubscriptionpost) | **POST** /gems_shop/subscription | Buy Subscription
+*GemsShopApi* | [**getCatalogGemsShopGet**](docs/Api/GemsShopApi.md#getcataloggemsshopget) | **GET** /gems_shop/ | Get Catalog
 *GrandExchangeApi* | [**getGeHistoryGrandexchangeHistoryCodeGet**](docs/Api/GrandExchangeApi.md#getgehistorygrandexchangehistorycodeget) | **GET** /grandexchange/history/{code} | Get Ge History
 *GrandExchangeApi* | [**getGeOrderGrandexchangeOrdersIdGet**](docs/Api/GrandExchangeApi.md#getgeordergrandexchangeordersidget) | **GET** /grandexchange/orders/{id} | Get Ge Order
 *GrandExchangeApi* | [**getGeOrdersGrandexchangeOrdersGet**](docs/Api/GrandExchangeApi.md#getgeordersgrandexchangeordersget) | **GET** /grandexchange/orders | Get Ge Orders
@@ -129,13 +135,22 @@ Class | Method | HTTP request | Description
 *MapsApi* | [**getMapByPositionMapsLayerXYGet**](docs/Api/MapsApi.md#getmapbypositionmapslayerxyget) | **GET** /maps/{layer}/{x}/{y} | Get Map By Position
 *MonstersApi* | [**getAllMonstersMonstersGet**](docs/Api/MonstersApi.md#getallmonstersmonstersget) | **GET** /monsters | Get All Monsters
 *MonstersApi* | [**getMonsterMonstersCodeGet**](docs/Api/MonstersApi.md#getmonstermonsterscodeget) | **GET** /monsters/{code} | Get Monster
+*MyAccountApi* | [**buyGemsMyBuyGemsPost**](docs/Api/MyAccountApi.md#buygemsmybuygemspost) | **POST** /my/buy_gems | Buy Gems
+*MyAccountApi* | [**buySubscriptionMySubscribeStripePost**](docs/Api/MyAccountApi.md#buysubscriptionmysubscribestripepost) | **POST** /my/subscribe/stripe | Subscribe with Stripe
+*MyAccountApi* | [**cancelSubscriptionMySubscribeCancelPost**](docs/Api/MyAccountApi.md#cancelsubscriptionmysubscribecancelpost) | **POST** /my/subscribe/cancel | Cancel Subscription
+*MyAccountApi* | [**changeEmailMyChangeEmailPost**](docs/Api/MyAccountApi.md#changeemailmychangeemailpost) | **POST** /my/change_email | Change Email
 *MyAccountApi* | [**changePasswordMyChangePasswordPost**](docs/Api/MyAccountApi.md#changepasswordmychangepasswordpost) | **POST** /my/change_password | Change Password
 *MyAccountApi* | [**getAccountDetailsMyDetailsGet**](docs/Api/MyAccountApi.md#getaccountdetailsmydetailsget) | **GET** /my/details | Get Account Details
 *MyAccountApi* | [**getBankDetailsMyBankGet**](docs/Api/MyAccountApi.md#getbankdetailsmybankget) | **GET** /my/bank | Get Bank Details
 *MyAccountApi* | [**getBankItemsMyBankItemsGet**](docs/Api/MyAccountApi.md#getbankitemsmybankitemsget) | **GET** /my/bank/items | Get Bank Items
 *MyAccountApi* | [**getGeHistoryMyGrandexchangeHistoryGet**](docs/Api/MyAccountApi.md#getgehistorymygrandexchangehistoryget) | **GET** /my/grandexchange/history | Get Ge History
 *MyAccountApi* | [**getGeOrdersMyGrandexchangeOrdersGet**](docs/Api/MyAccountApi.md#getgeordersmygrandexchangeordersget) | **GET** /my/grandexchange/orders | Get Ge Orders
-*MyAccountApi* | [**getPendingItemsMyPendingItemsGet**](docs/Api/MyAccountApi.md#getpendingitemsmypendingitemsget) | **GET** /my/pending-items | Get Pending Items
+*MyAccountApi* | [**getMyGemsHistoryMyGemsHistoryGet**](docs/Api/MyAccountApi.md#getmygemshistorymygemshistoryget) | **GET** /my/gems_history | Get My Gems History
+*MyAccountApi* | [**getMyPurchaseHistoryMyPurchaseHistoryGet**](docs/Api/MyAccountApi.md#getmypurchasehistorymypurchasehistoryget) | **GET** /my/purchase_history | Get My Purchase History
+*MyAccountApi* | [**getMySubscriptionMySubscriptionGet**](docs/Api/MyAccountApi.md#getmysubscriptionmysubscriptionget) | **GET** /my/subscription | Get My Subscription
+*MyAccountApi* | [**getPendingItemsMyPendingItemsGet**](docs/Api/MyAccountApi.md#getpendingitemsmypendingitemsget) | **GET** /my/pending_items | Get Pending Items
+*MyAccountApi* | [**getRateLimitsMyRatesGet**](docs/Api/MyAccountApi.md#getratelimitsmyratesget) | **GET** /my/rates | Get Rate Limits
+*MyAccountApi* | [**subscribeWithMemberTokenMySubscribeMemberTokenPost**](docs/Api/MyAccountApi.md#subscribewithmembertokenmysubscribemembertokenpost) | **POST** /my/subscribe/member_token | Subscribe With Member Token
 *MyCharactersApi* | [**actionAcceptNewTaskMyNameActionTaskNewPost**](docs/Api/MyCharactersApi.md#actionacceptnewtaskmynameactiontasknewpost) | **POST** /my/{name}/action/task/new | Action Accept New Task
 *MyCharactersApi* | [**actionBuyBankExpansionMyNameActionBankBuyExpansionPost**](docs/Api/MyCharactersApi.md#actionbuybankexpansionmynameactionbankbuyexpansionpost) | **POST** /my/{name}/action/bank/buy_expansion | Action Buy Bank Expansion
 *MyCharactersApi* | [**actionChangeSkinMyNameActionChangeSkinPost**](docs/Api/MyCharactersApi.md#actionchangeskinmynameactionchangeskinpost) | **POST** /my/{name}/action/change_skin | Action Change Skin
@@ -150,8 +165,8 @@ Class | Method | HTTP request | Description
 *MyCharactersApi* | [**actionGatheringMyNameActionGatheringPost**](docs/Api/MyCharactersApi.md#actiongatheringmynameactiongatheringpost) | **POST** /my/{name}/action/gathering | Action Gathering
 *MyCharactersApi* | [**actionGeBuyItemMyNameActionGrandexchangeBuyPost**](docs/Api/MyCharactersApi.md#actiongebuyitemmynameactiongrandexchangebuypost) | **POST** /my/{name}/action/grandexchange/buy | Action Ge Buy Item
 *MyCharactersApi* | [**actionGeCancelOrderMyNameActionGrandexchangeCancelPost**](docs/Api/MyCharactersApi.md#actiongecancelordermynameactiongrandexchangecancelpost) | **POST** /my/{name}/action/grandexchange/cancel | Action Ge Cancel Order
-*MyCharactersApi* | [**actionGeCreateBuyOrderMyNameActionGrandexchangeCreateBuyOrderPost**](docs/Api/MyCharactersApi.md#actiongecreatebuyordermynameactiongrandexchangecreatebuyorderpost) | **POST** /my/{name}/action/grandexchange/create-buy-order | Action Ge Create Buy Order
-*MyCharactersApi* | [**actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost**](docs/Api/MyCharactersApi.md#actiongecreatesellordermynameactiongrandexchangecreatesellorderpost) | **POST** /my/{name}/action/grandexchange/create-sell-order | Action Ge Create Sell Order
+*MyCharactersApi* | [**actionGeCreateBuyOrderMyNameActionGrandexchangeCreateBuyOrderPost**](docs/Api/MyCharactersApi.md#actiongecreatebuyordermynameactiongrandexchangecreatebuyorderpost) | **POST** /my/{name}/action/grandexchange/create_buy_order | Action Ge Create Buy Order
+*MyCharactersApi* | [**actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost**](docs/Api/MyCharactersApi.md#actiongecreatesellordermynameactiongrandexchangecreatesellorderpost) | **POST** /my/{name}/action/grandexchange/create_sell_order | Action Ge Create Sell Order
 *MyCharactersApi* | [**actionGeFillMyNameActionGrandexchangeFillPost**](docs/Api/MyCharactersApi.md#actiongefillmynameactiongrandexchangefillpost) | **POST** /my/{name}/action/grandexchange/fill | Action Ge Fill
 *MyCharactersApi* | [**actionGiveGoldMyNameActionGiveGoldPost**](docs/Api/MyCharactersApi.md#actiongivegoldmynameactiongivegoldpost) | **POST** /my/{name}/action/give/gold | Action Give Gold
 *MyCharactersApi* | [**actionGiveItemsMyNameActionGiveItemPost**](docs/Api/MyCharactersApi.md#actiongiveitemsmynameactiongiveitempost) | **POST** /my/{name}/action/give/item | Action Give Items
@@ -175,10 +190,17 @@ Class | Method | HTTP request | Description
 *NPCsApi* | [**getAllNpcsNpcsDetailsGet**](docs/Api/NPCsApi.md#getallnpcsnpcsdetailsget) | **GET** /npcs/details | Get All Npcs
 *NPCsApi* | [**getNpcItemsNpcsItemsCodeGet**](docs/Api/NPCsApi.md#getnpcitemsnpcsitemscodeget) | **GET** /npcs/items/{code} | Get Npc Items
 *NPCsApi* | [**getNpcNpcsDetailsCodeGet**](docs/Api/NPCsApi.md#getnpcnpcsdetailscodeget) | **GET** /npcs/details/{code} | Get Npc
+*RaidsApi* | [**getAllRaidsRaidsGet**](docs/Api/RaidsApi.md#getallraidsraidsget) | **GET** /raids | Get All Raids
+*RaidsApi* | [**getRaidLeaderboardRaidsCodeLeaderboardGet**](docs/Api/RaidsApi.md#getraidleaderboardraidscodeleaderboardget) | **GET** /raids/{code}/leaderboard | Get Raid Leaderboard
+*RaidsApi* | [**getRaidRaidsCodeGet**](docs/Api/RaidsApi.md#getraidraidscodeget) | **GET** /raids/{code} | Get Raid
 *ResourcesApi* | [**getAllResourcesResourcesGet**](docs/Api/ResourcesApi.md#getallresourcesresourcesget) | **GET** /resources | Get All Resources
 *ResourcesApi* | [**getResourceResourcesCodeGet**](docs/Api/ResourcesApi.md#getresourceresourcescodeget) | **GET** /resources/{code} | Get Resource
+*SeasonRewardsApi* | [**getAllSeasonRewardsSeasonRewardsGet**](docs/Api/SeasonRewardsApi.md#getallseasonrewardsseasonrewardsget) | **GET** /season_rewards | Get All Season Rewards
+*SeasonRewardsApi* | [**getSeasonRewardsByCodeSeasonRewardsCodeGet**](docs/Api/SeasonRewardsApi.md#getseasonrewardsbycodeseasonrewardscodeget) | **GET** /season_rewards/{code} | Get Season Rewards By Code
 *ServerDetailsApi* | [**getServerDetailsGet**](docs/Api/ServerDetailsApi.md#getserverdetailsget) | **GET** / | Get Server Details
-*SimulationApi* | [**fightSimulationSimulationFightSimulationPost**](docs/Api/SimulationApi.md#fightsimulationsimulationfightsimulationpost) | **POST** /simulation/fight_simulation | Fight Simulation
+*SimulationApi* | [**fightSimulationSimulationFightPost**](docs/Api/SimulationApi.md#fightsimulationsimulationfightpost) | **POST** /simulation/fight | Fight Simulation
+*SkinsApi* | [**getAllSkinsSkinsGet**](docs/Api/SkinsApi.md#getallskinsskinsget) | **GET** /skins | Get All Skins
+*SkinsApi* | [**getSkinSkinsCodeGet**](docs/Api/SkinsApi.md#getskinskinscodeget) | **GET** /skins/{code} | Get Skin
 *TasksApi* | [**getAllTasksRewardsTasksRewardsGet**](docs/Api/TasksApi.md#getalltasksrewardstasksrewardsget) | **GET** /tasks/rewards | Get All Tasks Rewards
 *TasksApi* | [**getAllTasksTasksListGet**](docs/Api/TasksApi.md#getalltaskstaskslistget) | **GET** /tasks/list | Get All Tasks
 *TasksApi* | [**getTaskTasksListCodeGet**](docs/Api/TasksApi.md#gettasktaskslistcodeget) | **GET** /tasks/list/{code} | Get Task
@@ -206,7 +228,9 @@ Class | Method | HTTP request | Description
 - [ActiveEventSchema](docs/Model/ActiveEventSchema.md)
 - [AddAccountSchema](docs/Model/AddAccountSchema.md)
 - [AddCharacterSchema](docs/Model/AddCharacterSchema.md)
-- [BadgeConditionSchema](docs/Model/BadgeConditionSchema.md)
+- [AssistantAnswerDataSchema](docs/Model/AssistantAnswerDataSchema.md)
+- [AssistantAnswerSchema](docs/Model/AssistantAnswerSchema.md)
+- [AssistantQuestionSchema](docs/Model/AssistantQuestionSchema.md)
 - [BadgeResponseSchema](docs/Model/BadgeResponseSchema.md)
 - [BadgeSchema](docs/Model/BadgeSchema.md)
 - [BankExtensionSchema](docs/Model/BankExtensionSchema.md)
@@ -218,7 +242,12 @@ Class | Method | HTTP request | Description
 - [BankItemTransactionSchema](docs/Model/BankItemTransactionSchema.md)
 - [BankResponseSchema](docs/Model/BankResponseSchema.md)
 - [BankSchema](docs/Model/BankSchema.md)
-- [ChangePassword](docs/Model/ChangePassword.md)
+- [BuyCustomDesignRequestSchema](docs/Model/BuyCustomDesignRequestSchema.md)
+- [BuySkinRequestSchema](docs/Model/BuySkinRequestSchema.md)
+- [BuySkinResponseDataSchema](docs/Model/BuySkinResponseDataSchema.md)
+- [BuySkinResponseSchema](docs/Model/BuySkinResponseSchema.md)
+- [ChangeEmailSchema](docs/Model/ChangeEmailSchema.md)
+- [ChangePasswordSchema](docs/Model/ChangePasswordSchema.md)
 - [ChangeSkinCharacterDataSchema](docs/Model/ChangeSkinCharacterDataSchema.md)
 - [ChangeSkinCharacterSchema](docs/Model/ChangeSkinCharacterSchema.md)
 - [ChangeSkinResponseSchema](docs/Model/ChangeSkinResponseSchema.md)
@@ -234,10 +263,13 @@ Class | Method | HTTP request | Description
 - [CharacterRestDataSchema](docs/Model/CharacterRestDataSchema.md)
 - [CharacterRestResponseSchema](docs/Model/CharacterRestResponseSchema.md)
 - [CharacterSchema](docs/Model/CharacterSchema.md)
-- [CharacterSkin](docs/Model/CharacterSkin.md)
+- [CharacterStatsResponseSchema](docs/Model/CharacterStatsResponseSchema.md)
+- [CharacterStatsSchema](docs/Model/CharacterStatsSchema.md)
 - [CharacterTransitionDataSchema](docs/Model/CharacterTransitionDataSchema.md)
 - [CharacterTransitionResponseSchema](docs/Model/CharacterTransitionResponseSchema.md)
 - [CharactersListSchema](docs/Model/CharactersListSchema.md)
+- [CheckoutResponseSchema](docs/Model/CheckoutResponseSchema.md)
+- [CheckoutResponseWrapperSchema](docs/Model/CheckoutResponseWrapperSchema.md)
 - [ClaimPendingItemDataSchema](docs/Model/ClaimPendingItemDataSchema.md)
 - [ClaimPendingItemResponseSchema](docs/Model/ClaimPendingItemResponseSchema.md)
 - [CombatResultSchema](docs/Model/CombatResultSchema.md)
@@ -254,10 +286,11 @@ Class | Method | HTTP request | Description
 - [DataPageAccountLeaderboardSchema](docs/Model/DataPageAccountLeaderboardSchema.md)
 - [DataPageActiveCharacterSchema](docs/Model/DataPageActiveCharacterSchema.md)
 - [DataPageCharacterLeaderboardSchema](docs/Model/DataPageCharacterLeaderboardSchema.md)
+- [DataPageGEOrderHistorySchema](docs/Model/DataPageGEOrderHistorySchema.md)
 - [DataPageGEOrderSchema](docs/Model/DataPageGEOrderSchema.md)
-- [DataPageGeOrderHistorySchema](docs/Model/DataPageGeOrderHistorySchema.md)
 - [DataPageLogSchema](docs/Model/DataPageLogSchema.md)
 - [DataPagePendingItemSchema](docs/Model/DataPagePendingItemSchema.md)
+- [DataPageRaidLeaderboardEntrySchema](docs/Model/DataPageRaidLeaderboardEntrySchema.md)
 - [DataPageSimpleItemSchema](docs/Model/DataPageSimpleItemSchema.md)
 - [DeleteCharacterSchema](docs/Model/DeleteCharacterSchema.md)
 - [DeleteItemResponseSchema](docs/Model/DeleteItemResponseSchema.md)
@@ -270,9 +303,10 @@ Class | Method | HTTP request | Description
 - [EffectSchema](docs/Model/EffectSchema.md)
 - [EffectSubtype](docs/Model/EffectSubtype.md)
 - [EffectType](docs/Model/EffectType.md)
-- [EquipRequestSchema](docs/Model/EquipRequestSchema.md)
 - [EquipSchema](docs/Model/EquipSchema.md)
+- [EquipmentItemSchema](docs/Model/EquipmentItemSchema.md)
 - [EquipmentResponseSchema](docs/Model/EquipmentResponseSchema.md)
+- [EquipmentTransactionSchema](docs/Model/EquipmentTransactionSchema.md)
 - [ErrorResponseSchema](docs/Model/ErrorResponseSchema.md)
 - [ErrorSchema](docs/Model/ErrorSchema.md)
 - [EventContentSchema](docs/Model/EventContentSchema.md)
@@ -287,7 +321,8 @@ Class | Method | HTTP request | Description
 - [GECreateOrderTransactionResponseSchema](docs/Model/GECreateOrderTransactionResponseSchema.md)
 - [GEFillBuyOrderSchema](docs/Model/GEFillBuyOrderSchema.md)
 - [GEOrderCreatedSchema](docs/Model/GEOrderCreatedSchema.md)
-- [GEOrderCreationrSchema](docs/Model/GEOrderCreationrSchema.md)
+- [GEOrderCreationSchema](docs/Model/GEOrderCreationSchema.md)
+- [GEOrderHistorySchema](docs/Model/GEOrderHistorySchema.md)
 - [GEOrderResponseSchema](docs/Model/GEOrderResponseSchema.md)
 - [GEOrderSchema](docs/Model/GEOrderSchema.md)
 - [GEOrderTransactionSchema](docs/Model/GEOrderTransactionSchema.md)
@@ -296,7 +331,18 @@ Class | Method | HTTP request | Description
 - [GETransactionResponseSchema](docs/Model/GETransactionResponseSchema.md)
 - [GETransactionSchema](docs/Model/GETransactionSchema.md)
 - [GatheringSkill](docs/Model/GatheringSkill.md)
-- [GeOrderHistorySchema](docs/Model/GeOrderHistorySchema.md)
+- [GemShopCatalogDataSchema](docs/Model/GemShopCatalogDataSchema.md)
+- [GemShopCatalogResponseSchema](docs/Model/GemShopCatalogResponseSchema.md)
+- [GemShopCustomDesignCatalogItemSchema](docs/Model/GemShopCustomDesignCatalogItemSchema.md)
+- [GemShopCustomDesignPurchaseResponseDataSchema](docs/Model/GemShopCustomDesignPurchaseResponseDataSchema.md)
+- [GemShopCustomDesignPurchaseResponseSchema](docs/Model/GemShopCustomDesignPurchaseResponseSchema.md)
+- [GemShopSkinCatalogItemSchema](docs/Model/GemShopSkinCatalogItemSchema.md)
+- [GemShopSpawnEventCatalogItemSchema](docs/Model/GemShopSpawnEventCatalogItemSchema.md)
+- [GemShopSubscriptionCatalogItemSchema](docs/Model/GemShopSubscriptionCatalogItemSchema.md)
+- [GemShopSubscriptionResponseDataSchema](docs/Model/GemShopSubscriptionResponseDataSchema.md)
+- [GemShopSubscriptionResponseSchema](docs/Model/GemShopSubscriptionResponseSchema.md)
+- [GemTransactionListResponseSchema](docs/Model/GemTransactionListResponseSchema.md)
+- [GemTransactionSchema](docs/Model/GemTransactionSchema.md)
 - [GiveGoldDataSchema](docs/Model/GiveGoldDataSchema.md)
 - [GiveGoldResponseSchema](docs/Model/GiveGoldResponseSchema.md)
 - [GiveGoldSchema](docs/Model/GiveGoldSchema.md)
@@ -306,7 +352,7 @@ Class | Method | HTTP request | Description
 - [GoldSchema](docs/Model/GoldSchema.md)
 - [HTTPValidationError](docs/Model/HTTPValidationError.md)
 - [InteractionSchema](docs/Model/InteractionSchema.md)
-- [InventorySlot](docs/Model/InventorySlot.md)
+- [InventorySlotSchema](docs/Model/InventorySlotSchema.md)
 - [ItemResponseSchema](docs/Model/ItemResponseSchema.md)
 - [ItemSchema](docs/Model/ItemSchema.md)
 - [ItemSlot](docs/Model/ItemSlot.md)
@@ -320,13 +366,15 @@ Class | Method | HTTP request | Description
 - [MapLayer](docs/Model/MapLayer.md)
 - [MapResponseSchema](docs/Model/MapResponseSchema.md)
 - [MapSchema](docs/Model/MapSchema.md)
+- [MemberTokenSubscriptionResponseDataSchema](docs/Model/MemberTokenSubscriptionResponseDataSchema.md)
+- [MemberTokenSubscriptionResponseSchema](docs/Model/MemberTokenSubscriptionResponseSchema.md)
 - [MonsterResponseSchema](docs/Model/MonsterResponseSchema.md)
 - [MonsterSchema](docs/Model/MonsterSchema.md)
 - [MonsterType](docs/Model/MonsterType.md)
 - [MyAccountDetails](docs/Model/MyAccountDetails.md)
 - [MyAccountDetailsSchema](docs/Model/MyAccountDetailsSchema.md)
 - [MyCharactersListSchema](docs/Model/MyCharactersListSchema.md)
-- [NPCItem](docs/Model/NPCItem.md)
+- [NPCItemSchema](docs/Model/NPCItemSchema.md)
 - [NPCResponseSchema](docs/Model/NPCResponseSchema.md)
 - [NPCSchema](docs/Model/NPCSchema.md)
 - [NPCType](docs/Model/NPCType.md)
@@ -339,7 +387,26 @@ Class | Method | HTTP request | Description
 - [PasswordResetResponseSchema](docs/Model/PasswordResetResponseSchema.md)
 - [PendingItemSchema](docs/Model/PendingItemSchema.md)
 - [PendingItemSource](docs/Model/PendingItemSource.md)
+- [PurchaseGemsRequestSchema](docs/Model/PurchaseGemsRequestSchema.md)
+- [PurchaseHistoryListResponseSchema](docs/Model/PurchaseHistoryListResponseSchema.md)
+- [PurchaseHistorySchema](docs/Model/PurchaseHistorySchema.md)
+- [PurchaseType](docs/Model/PurchaseType.md)
+- [RaidDamageRewardSchema](docs/Model/RaidDamageRewardSchema.md)
+- [RaidInstanceResult](docs/Model/RaidInstanceResult.md)
+- [RaidInstanceSchema](docs/Model/RaidInstanceSchema.md)
+- [RaidLeaderboardEntrySchema](docs/Model/RaidLeaderboardEntrySchema.md)
+- [RaidRankRewardSchema](docs/Model/RaidRankRewardSchema.md)
+- [RaidResponseSchema](docs/Model/RaidResponseSchema.md)
+- [RaidRewardsSchema](docs/Model/RaidRewardsSchema.md)
+- [RaidScheduleSchema](docs/Model/RaidScheduleSchema.md)
+- [RaidSchema](docs/Model/RaidSchema.md)
+- [RaidStatus](docs/Model/RaidStatus.md)
+- [RaidWeekday](docs/Model/RaidWeekday.md)
 - [RateLimitSchema](docs/Model/RateLimitSchema.md)
+- [RateLimitScopeSchema](docs/Model/RateLimitScopeSchema.md)
+- [RateLimitWindowSchema](docs/Model/RateLimitWindowSchema.md)
+- [RateLimitsDataSchema](docs/Model/RateLimitsDataSchema.md)
+- [RateLimitsSchema](docs/Model/RateLimitsSchema.md)
 - [RecyclingDataSchema](docs/Model/RecyclingDataSchema.md)
 - [RecyclingItemsSchema](docs/Model/RecyclingItemsSchema.md)
 - [RecyclingResponseSchema](docs/Model/RecyclingResponseSchema.md)
@@ -351,18 +418,20 @@ Class | Method | HTTP request | Description
 - [RewardDataSchema](docs/Model/RewardDataSchema.md)
 - [RewardItemSchema](docs/Model/RewardItemSchema.md)
 - [RewardResponseSchema](docs/Model/RewardResponseSchema.md)
+- [RewardType](docs/Model/RewardType.md)
 - [RewardsSchema](docs/Model/RewardsSchema.md)
-- [SeasonBadgeSchema](docs/Model/SeasonBadgeSchema.md)
+- [SeasonRewardSchema](docs/Model/SeasonRewardSchema.md)
 - [SeasonSchema](docs/Model/SeasonSchema.md)
-- [SeasonSkinSchema](docs/Model/SeasonSkinSchema.md)
 - [SimpleEffectSchema](docs/Model/SimpleEffectSchema.md)
 - [SimpleItemSchema](docs/Model/SimpleItemSchema.md)
-- [SimpleNPCItem](docs/Model/SimpleNPCItem.md)
+- [SimpleNPCItemSchema](docs/Model/SimpleNPCItemSchema.md)
 - [Skill](docs/Model/Skill.md)
 - [SkillDataSchema](docs/Model/SkillDataSchema.md)
 - [SkillInfoSchema](docs/Model/SkillInfoSchema.md)
 - [SkillResponseSchema](docs/Model/SkillResponseSchema.md)
-- [SpawnEventRequest](docs/Model/SpawnEventRequest.md)
+- [SkinResponseSchema](docs/Model/SkinResponseSchema.md)
+- [SkinSchema](docs/Model/SkinSchema.md)
+- [SpawnEventRequestSchema](docs/Model/SpawnEventRequestSchema.md)
 - [StaticDataPageAchievementSchema](docs/Model/StaticDataPageAchievementSchema.md)
 - [StaticDataPageActiveEventSchema](docs/Model/StaticDataPageActiveEventSchema.md)
 - [StaticDataPageBadgeSchema](docs/Model/StaticDataPageBadgeSchema.md)
@@ -372,13 +441,22 @@ Class | Method | HTTP request | Description
 - [StaticDataPageItemSchema](docs/Model/StaticDataPageItemSchema.md)
 - [StaticDataPageMapSchema](docs/Model/StaticDataPageMapSchema.md)
 - [StaticDataPageMonsterSchema](docs/Model/StaticDataPageMonsterSchema.md)
-- [StaticDataPageNPCItem](docs/Model/StaticDataPageNPCItem.md)
+- [StaticDataPageNPCItemSchema](docs/Model/StaticDataPageNPCItemSchema.md)
 - [StaticDataPageNPCSchema](docs/Model/StaticDataPageNPCSchema.md)
+- [StaticDataPageRaidSchema](docs/Model/StaticDataPageRaidSchema.md)
 - [StaticDataPageResourceSchema](docs/Model/StaticDataPageResourceSchema.md)
+- [StaticDataPageSeasonRewardSchema](docs/Model/StaticDataPageSeasonRewardSchema.md)
+- [StaticDataPageSkinSchema](docs/Model/StaticDataPageSkinSchema.md)
 - [StaticDataPageTaskFullSchema](docs/Model/StaticDataPageTaskFullSchema.md)
 - [StatusResponseSchema](docs/Model/StatusResponseSchema.md)
 - [StatusSchema](docs/Model/StatusSchema.md)
+- [StatusSeasonRewardSchema](docs/Model/StatusSeasonRewardSchema.md)
 - [StorageEffectSchema](docs/Model/StorageEffectSchema.md)
+- [StripeSubscriptionPlan](docs/Model/StripeSubscriptionPlan.md)
+- [SubscribeRequestSchema](docs/Model/SubscribeRequestSchema.md)
+- [SubscriptionPlan](docs/Model/SubscriptionPlan.md)
+- [SubscriptionResponseSchema](docs/Model/SubscriptionResponseSchema.md)
+- [SubscriptionSchema](docs/Model/SubscriptionSchema.md)
 - [TaskCancelledResponseSchema](docs/Model/TaskCancelledResponseSchema.md)
 - [TaskCancelledSchema](docs/Model/TaskCancelledSchema.md)
 - [TaskDataSchema](docs/Model/TaskDataSchema.md)

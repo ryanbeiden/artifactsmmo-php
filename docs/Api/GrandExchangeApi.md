@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getGeHistoryGrandexchangeHistoryCodeGet()`
 
 ```php
-getGeHistoryGrandexchangeHistoryCodeGet($code, $account, $page, $size): \ArtifactsMmo\Model\DataPageGeOrderHistorySchema
+getGeHistoryGrandexchangeHistoryCodeGet($code, $account, $page, $size): \ArtifactsMmo\Model\DataPageGEOrderHistorySchema
 ```
 
 Get Ge History
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-[**\ArtifactsMmo\Model\DataPageGeOrderHistorySchema**](../Model/DataPageGeOrderHistorySchema.md)
+[**\ArtifactsMmo\Model\DataPageGEOrderHistorySchema**](../Model/DataPageGEOrderHistorySchema.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ No authorization required
 ## `getGeOrdersGrandexchangeOrdersGet()`
 
 ```php
-getGeOrdersGrandexchangeOrdersGet($code, $account, $type, $page, $size): \ArtifactsMmo\Model\DataPageGEOrderSchema
+getGeOrdersGrandexchangeOrdersGet($code, $account, $type, $itemType, $page, $size): \ArtifactsMmo\Model\DataPageGEOrderSchema
 ```
 
 Get Ge Orders
@@ -155,11 +155,12 @@ $apiInstance = new ArtifactsMmo\Api\GrandExchangeApi(
 $code = 'code_example'; // string | The code of the item.
 $account = 'account_example'; // string | The account that sells or buys items.
 $type = new \ArtifactsMmo\Model\\ArtifactsMmoModelGEOrderType(); // \ArtifactsMmoModelGEOrderType | Filter by order type (sell or buy).
+$itemType = new \ArtifactsMmo\Model\\ArtifactsMmoModelItemType(); // \ArtifactsMmoModelItemType | Filter by item type.
 $page = 1; // int | Page number
 $size = 50; // int | Page size
 
 try {
-    $result = $apiInstance->getGeOrdersGrandexchangeOrdersGet($code, $account, $type, $page, $size);
+    $result = $apiInstance->getGeOrdersGrandexchangeOrdersGet($code, $account, $type, $itemType, $page, $size);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GrandExchangeApi->getGeOrdersGrandexchangeOrdersGet: ', $e->getMessage(), PHP_EOL;
@@ -173,6 +174,7 @@ try {
 | **code** | **string**| The code of the item. | [optional] |
 | **account** | **string**| The account that sells or buys items. | [optional] |
 | **type** | [**\ArtifactsMmoModelGEOrderType**](../Model/.md)| Filter by order type (sell or buy). | [optional] |
+| **itemType** | [**\ArtifactsMmoModelItemType**](../Model/.md)| Filter by item type. | [optional] |
 | **page** | **int**| Page number | [optional] [default to 1] |
 | **size** | **int**| Page size | [optional] [default to 50] |
 

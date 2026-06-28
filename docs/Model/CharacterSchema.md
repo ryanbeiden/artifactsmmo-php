@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** | Name of the character. |
 **account** | **string** | Account name. |
-**skin** | [**\ArtifactsMmo\Model\CharacterSkin**](CharacterSkin.md) | Character skin code. |
+**skin** | **string** | Character skin code. |
 **level** | **int** | Combat level. |
 **xp** | **int** | The current xp level of the combat level. |
 **maxXp** | **int** | XP required to level up the character. |
@@ -87,6 +87,6 @@ Name | Type | Description | Notes
 **taskProgress** | **int** | Task progression. |
 **taskTotal** | **int** | Task total objective. |
 **inventoryMaxItems** | **int** | Inventory max items. |
-**inventory** | [**\ArtifactsMmo\Model\InventorySlot[]**](InventorySlot.md) | List of inventory slots. | [optional]
+**inventory** | [**\ArtifactsMmo\Model\InventorySlotSchema[]**](InventorySlotSchema.md) | List of inventory slots. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

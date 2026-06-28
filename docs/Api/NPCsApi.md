@@ -15,7 +15,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getAllNpcsItemsNpcsItemsGet()`
 
 ```php
-getAllNpcsItemsNpcsItemsGet($code, $npc, $currency, $page, $size): \ArtifactsMmo\Model\StaticDataPageNPCItem
+getAllNpcsItemsNpcsItemsGet($code, $npc, $currency, $page, $size): \ArtifactsMmo\Model\StaticDataPageNPCItemSchema
 ```
 
 Get All Npcs Items
@@ -61,7 +61,7 @@ try {
 
 ### Return type
 
-[**\ArtifactsMmo\Model\StaticDataPageNPCItem**](../Model/StaticDataPageNPCItem.md)
+[**\ArtifactsMmo\Model\StaticDataPageNPCItemSchema**](../Model/StaticDataPageNPCItemSchema.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ No authorization required
 ## `getNpcItemsNpcsItemsCodeGet()`
 
 ```php
-getNpcItemsNpcsItemsCodeGet($code, $page, $size): \ArtifactsMmo\Model\StaticDataPageNPCItem
+getNpcItemsNpcsItemsCodeGet($code, $page, $size): \ArtifactsMmo\Model\StaticDataPageNPCItemSchema
 ```
 
 Get Npc Items
@@ -187,7 +187,7 @@ try {
 
 ### Return type
 
-[**\ArtifactsMmo\Model\StaticDataPageNPCItem**](../Model/StaticDataPageNPCItem.md)
+[**\ArtifactsMmo\Model\StaticDataPageNPCItemSchema**](../Model/StaticDataPageNPCItemSchema.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# GeOrderHistorySchema
+# GEOrderHistorySchema
 
 ## Properties
 

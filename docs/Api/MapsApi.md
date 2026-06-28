@@ -15,7 +15,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getAllMapsMapsGet()`
 
 ```php
-getAllMapsMapsGet($layer, $contentType, $contentCode, $hideBlockedMaps, $page, $size): \ArtifactsMmo\Model\StaticDataPageMapSchema
+getAllMapsMapsGet($layer, $contentType, $contentCode, $hideBlockedMaps, $hideEvent, $transition, $page, $size): \ArtifactsMmo\Model\StaticDataPageMapSchema
 ```
 
 Get All Maps
@@ -39,11 +39,13 @@ $layer = new \ArtifactsMmo\Model\\ArtifactsMmoModelMapLayer(); // \ArtifactsMmoM
 $contentType = new \ArtifactsMmo\Model\\ArtifactsMmoModelMapContentType(); // \ArtifactsMmoModelMapContentType | Type of maps.
 $contentCode = 'contentCode_example'; // string | Content code on the map.
 $hideBlockedMaps = false; // bool | When true, excludes maps with access_type 'blocked' from the results.
+$hideEvent = false; // bool | When true, does not overlay active events on maps.
+$transition = True; // bool | Filter maps by transition. True returns only maps with transitions, False returns only maps without.
 $page = 1; // int | Page number
 $size = 50; // int | Page size
 
 try {
-    $result = $apiInstance->getAllMapsMapsGet($layer, $contentType, $contentCode, $hideBlockedMaps, $page, $size);
+    $result = $apiInstance->getAllMapsMapsGet($layer, $contentType, $contentCode, $hideBlockedMaps, $hideEvent, $transition, $page, $size);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MapsApi->getAllMapsMapsGet: ', $e->getMessage(), PHP_EOL;
@@ -58,6 +60,8 @@ try {
 | **contentType** | [**\ArtifactsMmoModelMapContentType**](../Model/.md)| Type of maps. | [optional] |
 | **contentCode** | **string**| Content code on the map. | [optional] |
 | **hideBlockedMaps** | **bool**| When true, excludes maps with access_type &#39;blocked&#39; from the results. | [optional] [default to false] |
+| **hideEvent** | **bool**| When true, does not overlay active events on maps. | [optional] [default to false] |
+| **transition** | **bool**| Filter maps by transition. True returns only maps with transitions, False returns only maps without. | [optional] |
 | **page** | **int**| Page number | [optional] [default to 1] |
 | **size** | **int**| Page size | [optional] [default to 50] |
 
@@ -81,7 +85,7 @@ No authorization required
 ## `getLayerMapsMapsLayerGet()`
 
 ```php
-getLayerMapsMapsLayerGet($layer, $contentType, $contentCode, $hideBlockedMaps, $page, $size): \ArtifactsMmo\Model\StaticDataPageMapSchema
+getLayerMapsMapsLayerGet($layer, $contentType, $contentCode, $hideBlockedMaps, $hideEvent, $transition, $page, $size): \ArtifactsMmo\Model\StaticDataPageMapSchema
 ```
 
 Get Layer Maps
@@ -105,11 +109,13 @@ $layer = new \ArtifactsMmo\Model\\ArtifactsMmoModelMapLayer(); // \ArtifactsMmoM
 $contentType = new \ArtifactsMmo\Model\\ArtifactsMmoModelMapContentType(); // \ArtifactsMmoModelMapContentType | Type of maps.
 $contentCode = 'contentCode_example'; // string | Content code on the map.
 $hideBlockedMaps = false; // bool | When true, excludes maps with access_type 'blocked' from the results.
+$hideEvent = false; // bool | When true, does not overlay active events on maps.
+$transition = True; // bool | Filter maps by transition. True returns only maps with transitions, False returns only maps without.
 $page = 1; // int | Page number
 $size = 50; // int | Page size
 
 try {
-    $result = $apiInstance->getLayerMapsMapsLayerGet($layer, $contentType, $contentCode, $hideBlockedMaps, $page, $size);
+    $result = $apiInstance->getLayerMapsMapsLayerGet($layer, $contentType, $contentCode, $hideBlockedMaps, $hideEvent, $transition, $page, $size);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MapsApi->getLayerMapsMapsLayerGet: ', $e->getMessage(), PHP_EOL;
@@ -124,6 +130,8 @@ try {
 | **contentType** | [**\ArtifactsMmoModelMapContentType**](../Model/.md)| Type of maps. | [optional] |
 | **contentCode** | **string**| Content code on the map. | [optional] |
 | **hideBlockedMaps** | **bool**| When true, excludes maps with access_type &#39;blocked&#39; from the results. | [optional] [default to false] |
+| **hideEvent** | **bool**| When true, does not overlay active events on maps. | [optional] [default to false] |
+| **transition** | **bool**| Filter maps by transition. True returns only maps with transitions, False returns only maps without. | [optional] |
 | **page** | **int**| Page number | [optional] [default to 1] |
 | **size** | **int**| Page size | [optional] [default to 50] |
 

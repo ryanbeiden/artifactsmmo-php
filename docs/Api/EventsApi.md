@@ -8,7 +8,6 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | ------------- | ------------- | ------------- |
 | [**getAllActiveEventsEventsActiveGet()**](EventsApi.md#getAllActiveEventsEventsActiveGet) | **GET** /events/active | Get All Active Events |
 | [**getAllEventsEventsGet()**](EventsApi.md#getAllEventsEventsGet) | **GET** /events | Get All Events |
-| [**spawnEventEventsSpawnPost()**](EventsApi.md#spawnEventEventsSpawnPost) | **POST** /events/spawn | Spawn Event |
 
 
 ## `getAllActiveEventsEventsActiveGet()`
@@ -123,66 +122,6 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `spawnEventEventsSpawnPost()`
-
-```php
-spawnEventEventsSpawnPost($spawnEventRequest): \ArtifactsMmo\Model\ActiveEventResponseSchema
-```
-
-Spawn Event
-
-Spawn a specific event by consuming 1 event token. Member or founder account required.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: JWTBearer
-$config = ArtifactsMmo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new ArtifactsMmo\Api\EventsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$spawnEventRequest = new \ArtifactsMmo\Model\SpawnEventRequest(); // \ArtifactsMmo\Model\SpawnEventRequest
-
-try {
-    $result = $apiInstance->spawnEventEventsSpawnPost($spawnEventRequest);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling EventsApi->spawnEventEventsSpawnPost: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **spawnEventRequest** | [**\ArtifactsMmo\Model\SpawnEventRequest**](../Model/SpawnEventRequest.md)|  | |
-
-### Return type
-
-[**\ArtifactsMmo\Model\ActiveEventResponseSchema**](../Model/ActiveEventResponseSchema.md)
-
-### Authorization
-
-[JWTBearer](../../README.md#JWTBearer)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

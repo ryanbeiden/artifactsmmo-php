@@ -20,8 +20,8 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**actionGatheringMyNameActionGatheringPost()**](MyCharactersApi.md#actionGatheringMyNameActionGatheringPost) | **POST** /my/{name}/action/gathering | Action Gathering |
 | [**actionGeBuyItemMyNameActionGrandexchangeBuyPost()**](MyCharactersApi.md#actionGeBuyItemMyNameActionGrandexchangeBuyPost) | **POST** /my/{name}/action/grandexchange/buy | Action Ge Buy Item |
 | [**actionGeCancelOrderMyNameActionGrandexchangeCancelPost()**](MyCharactersApi.md#actionGeCancelOrderMyNameActionGrandexchangeCancelPost) | **POST** /my/{name}/action/grandexchange/cancel | Action Ge Cancel Order |
-| [**actionGeCreateBuyOrderMyNameActionGrandexchangeCreateBuyOrderPost()**](MyCharactersApi.md#actionGeCreateBuyOrderMyNameActionGrandexchangeCreateBuyOrderPost) | **POST** /my/{name}/action/grandexchange/create-buy-order | Action Ge Create Buy Order |
-| [**actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost()**](MyCharactersApi.md#actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost) | **POST** /my/{name}/action/grandexchange/create-sell-order | Action Ge Create Sell Order |
+| [**actionGeCreateBuyOrderMyNameActionGrandexchangeCreateBuyOrderPost()**](MyCharactersApi.md#actionGeCreateBuyOrderMyNameActionGrandexchangeCreateBuyOrderPost) | **POST** /my/{name}/action/grandexchange/create_buy_order | Action Ge Create Buy Order |
+| [**actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost()**](MyCharactersApi.md#actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost) | **POST** /my/{name}/action/grandexchange/create_sell_order | Action Ge Create Sell Order |
 | [**actionGeFillMyNameActionGrandexchangeFillPost()**](MyCharactersApi.md#actionGeFillMyNameActionGrandexchangeFillPost) | **POST** /my/{name}/action/grandexchange/fill | Action Ge Fill |
 | [**actionGiveGoldMyNameActionGiveGoldPost()**](MyCharactersApi.md#actionGiveGoldMyNameActionGiveGoldPost) | **POST** /my/{name}/action/give/gold | Action Give Gold |
 | [**actionGiveItemsMyNameActionGiveItemPost()**](MyCharactersApi.md#actionGiveItemsMyNameActionGiveItemPost) | **POST** /my/{name}/action/give/item | Action Give Items |
@@ -603,7 +603,7 @@ actionEquipItemMyNameActionEquipPost($name, $equipSchema): \ArtifactsMmo\Model\E
 
 Action Equip Item
 
-Equip an item on your character.
+Equip multiple items on your character. The cooldown will be 3 seconds multiplied by the number of different items equipped.
 
 ### Example
 
@@ -623,7 +623,7 @@ $apiInstance = new ArtifactsMmo\Api\MyCharactersApi(
     $config
 );
 $name = 'name_example'; // string | Name of your character.
-$equipSchema = new \ArtifactsMmo\Model\EquipSchema(); // \ArtifactsMmo\Model\EquipSchema
+$equipSchema = array(new \ArtifactsMmo\Model\EquipSchema()); // \ArtifactsMmo\Model\EquipSchema[]
 
 try {
     $result = $apiInstance->actionEquipItemMyNameActionEquipPost($name, $equipSchema);
@@ -638,7 +638,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **string**| Name of your character. | |
-| **equipSchema** | [**\ArtifactsMmo\Model\EquipSchema**](../Model/EquipSchema.md)|  | |
+| **equipSchema** | [**\ArtifactsMmo\Model\EquipSchema[]**](../Model/EquipSchema.md)|  | |
 
 ### Return type
 
@@ -968,7 +968,7 @@ try {
 ## `actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost()`
 
 ```php
-actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost($name, $gEOrderCreationrSchema): \ArtifactsMmo\Model\GECreateOrderTransactionResponseSchema
+actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost($name, $gEOrderCreationSchema): \ArtifactsMmo\Model\GECreateOrderTransactionResponseSchema
 ```
 
 Action Ge Create Sell Order
@@ -993,10 +993,10 @@ $apiInstance = new ArtifactsMmo\Api\MyCharactersApi(
     $config
 );
 $name = 'name_example'; // string | Name of your character.
-$gEOrderCreationrSchema = new \ArtifactsMmo\Model\GEOrderCreationrSchema(); // \ArtifactsMmo\Model\GEOrderCreationrSchema
+$gEOrderCreationSchema = new \ArtifactsMmo\Model\GEOrderCreationSchema(); // \ArtifactsMmo\Model\GEOrderCreationSchema
 
 try {
-    $result = $apiInstance->actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost($name, $gEOrderCreationrSchema);
+    $result = $apiInstance->actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost($name, $gEOrderCreationSchema);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MyCharactersApi->actionGeCreateSellOrderMyNameActionGrandexchangeCreateSellOrderPost: ', $e->getMessage(), PHP_EOL;
@@ -1008,7 +1008,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **string**| Name of your character. | |
-| **gEOrderCreationrSchema** | [**\ArtifactsMmo\Model\GEOrderCreationrSchema**](../Model/GEOrderCreationrSchema.md)|  | |
+| **gEOrderCreationSchema** | [**\ArtifactsMmo\Model\GEOrderCreationSchema**](../Model/GEOrderCreationSchema.md)|  | |
 
 ### Return type
 
@@ -1771,7 +1771,7 @@ actionUnequipItemMyNameActionUnequipPost($name, $unequipSchema): \ArtifactsMmo\M
 
 Action Unequip Item
 
-Unequip an item on your character.
+Unequip multiple items on your character. The cooldown will be 3 seconds multiplied by the number of different items unequipped.
 
 ### Example
 
@@ -1791,7 +1791,7 @@ $apiInstance = new ArtifactsMmo\Api\MyCharactersApi(
     $config
 );
 $name = 'name_example'; // string | Name of your character.
-$unequipSchema = new \ArtifactsMmo\Model\UnequipSchema(); // \ArtifactsMmo\Model\UnequipSchema
+$unequipSchema = array(new \ArtifactsMmo\Model\UnequipSchema()); // \ArtifactsMmo\Model\UnequipSchema[]
 
 try {
     $result = $apiInstance->actionUnequipItemMyNameActionUnequipPost($name, $unequipSchema);
@@ -1806,7 +1806,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **string**| Name of your character. | |
-| **unequipSchema** | [**\ArtifactsMmo\Model\UnequipSchema**](../Model/UnequipSchema.md)|  | |
+| **unequipSchema** | [**\ArtifactsMmo\Model\UnequipSchema[]**](../Model/UnequipSchema.md)|  | |
 
 ### Return type
 

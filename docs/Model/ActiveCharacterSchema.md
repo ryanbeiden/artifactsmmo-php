@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** | Name of the character. |
 **account** | **string** | Account name. |
-**skin** | [**\ArtifactsMmo\Model\CharacterSkin**](CharacterSkin.md) | Character skin code. |
+**skin** | **string** | Character skin code. |
 **x** | **int** | Character x coordinate. |
 **y** | **int** | Character y coordinate. |
 **layer** | [**\ArtifactsMmo\Model\MapLayer**](MapLayer.md) | Character current layer. |

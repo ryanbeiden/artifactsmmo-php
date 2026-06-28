@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **position** | **int** | Position in the leaderboard. |
 **name** | **string** | Character name. |
 **account** | **string** | Account name. |
-**status** | [**\ArtifactsMmo\Model\AccountStatus**](AccountStatus.md) | Member status. |
+**member** | **bool** | Member status. |
 **skin** | **string** | Character skin code. |
 **level** | **int** | Combat level. |
 **totalXp** | **int** | Total XP of your character. |

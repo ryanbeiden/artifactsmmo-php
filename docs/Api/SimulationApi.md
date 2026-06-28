@@ -6,13 +6,13 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**fightSimulationSimulationFightSimulationPost()**](SimulationApi.md#fightSimulationSimulationFightSimulationPost) | **POST** /simulation/fight_simulation | Fight Simulation |
+| [**fightSimulationSimulationFightPost()**](SimulationApi.md#fightSimulationSimulationFightPost) | **POST** /simulation/fight | Fight Simulation |
 
 
-## `fightSimulationSimulationFightSimulationPost()`
+## `fightSimulationSimulationFightPost()`
 
 ```php
-fightSimulationSimulationFightSimulationPost($combatSimulationRequestSchema): \ArtifactsMmo\Model\CombatSimulationResponseSchema
+fightSimulationSimulationFightPost($combatSimulationRequestSchema): \ArtifactsMmo\Model\CombatSimulationResponseSchema
 ```
 
 Fight Simulation
@@ -39,10 +39,10 @@ $apiInstance = new ArtifactsMmo\Api\SimulationApi(
 $combatSimulationRequestSchema = new \ArtifactsMmo\Model\CombatSimulationRequestSchema(); // \ArtifactsMmo\Model\CombatSimulationRequestSchema
 
 try {
-    $result = $apiInstance->fightSimulationSimulationFightSimulationPost($combatSimulationRequestSchema);
+    $result = $apiInstance->fightSimulationSimulationFightPost($combatSimulationRequestSchema);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SimulationApi->fightSimulationSimulationFightSimulationPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SimulationApi->fightSimulationSimulationFightPost: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
